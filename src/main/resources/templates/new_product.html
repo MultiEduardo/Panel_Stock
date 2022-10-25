@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <title>Crear nuevo producto</title>
+        <link href="../css/nuevo_producto.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="contenedor">
+        <h1>Crear nuevo producto</h1>
+        <form action="#" th:action="@{/save}" th:object="${product}" method="post" id="formulario">
+
+          <ul>
+            <li class="fila">
+              <input type="text" id="nombre" name="fullname" maxlength="30" size="30" placeholder="(nombre)" th:field="*{name}" required="required" autofocus="autofocus" />
+              <label for="nombre" class="propiedad">Nombre del producto:</label>
+            </li>
+              <li class="fila">
+                  <input type="text" id="nombre" name="fullname" maxlength="30" size="30" placeholder="(marca)" th:field="*{brand}" required="required" autofocus="autofocus" />
+              <label for="nombre" class="propiedad">Marca</label>
+              </li>
+              <li class="fila">
+                  <input type="text" id="nombre" name="fullname" maxlength="30" size="30" placeholder="(made in)" th:field="*{madein}" required="required" autofocus="autofocus" />
+              <label for="nombre" class="propiedad">Hecho en:</label>
+              </li>
+            <!-- range -->
+            <li class="fila">
+              <input type="range" id="salario" name="earnings" min="10" max="2000" step="10" value="1000" th:field="*{price}" list="valores-salario" onchange="document.querySelector('#salario-output').value = value;">
+              <label for="salario" class="propiedad">Precio</label>
+              <output for="salario" id="salario-output">$1000</output>
+              <datalist id="valores-salario">
+                <option>$200</option>
+                <option>$400</option>
+                <option>$600</option>
+                <option>$800</option>
+                <option>$1000</option>
+                <option>$1200</option>
+                <option>$1400</option>
+                <option>$1600</option>
+                <option>$1800</option>
+                <option>$2000</option>
+              </datalist>
+            </li>
+            <li class="fila botonera">
+              <button type="submit">Aceptar</button>
+              <button type="reset">Reiniciar</button>   
+            </li>
+          </ul>
+        </form>
+      </div>
+    </body>
+</html>

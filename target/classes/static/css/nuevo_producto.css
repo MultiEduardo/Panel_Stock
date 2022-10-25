@@ -1,0 +1,181 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 oct. 2022, 16:00:23
+    Author     : Bryna Vazquez
+*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+}
+body {
+  background-color: #CCC;
+}
+.contenedor {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+h1 {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #CCC;
+}
+form {
+  padding-top: 1rem;
+}
+form ul {
+  list-style: none;
+}
+::placeholder {
+  color: green;
+}
+::selection {
+  color: white;
+  background-color: green;
+}
+input, output, button {
+  font-size: .9rem;
+  padding: .3rem;
+}
+button {
+  background: #026aa7;
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.2);
+  padding: .5rem 1rem;
+  color: #DDD;
+  outline: none;
+  border: none;
+  cursor: pointer;
+} 
+button:hover {
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.6), 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+button:active {
+  box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+option {
+  font-size: .9rem;
+  padding: 5px 1rem;
+}
+input[type="number"] {
+  text-align: right;
+}
+:invalid:not(form) {
+  background-color: #FFEDED;
+  border: 1px solid red;
+  outline: none;
+}
+:invalid:focus {
+  box-shadow: 0 0 5px red;
+  outline: none;
+}
+.fila {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.propiedad {
+  min-width: 50%;
+  text-align: right;
+  padding-right: 1rem;
+  order: -1;
+}
+:focus ~ .propiedad,
+:active ~ .propiedad {
+  font-weight: bold;
+}
+:valid:focus:not(:placeholder-shown) ~ .propiedad,
+.fila :valid:active:not(:placeholder-shown) ~ .propiedad {
+  color: teal;
+}
+.fila :invalid:focus ~ .propiedad,
+.fila :invalid:active ~ .propiedad {
+  color: red;
+}
+
+.fila > *:not(.propiedad) {
+  margin-right: 1rem; 
+}
+.fila select[multiple] ~ .propiedad {
+  align-self: flex-start;
+}
+.botonera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.small {
+  width: 3rem;
+}
+:required:valid:not(:placeholder-shown) ~ .propiedad:before,
+input[type="email"]:valid:not(:placeholder-shown) ~ .propiedad:before,
+input[type="url"]:valid:not(:placeholder-shown) ~ .propiedad:before,
+input[type="tel"]:valid:not(:placeholder-shown) ~ .propiedad:before {
+  content: "\2713";
+  color: teal;
+  vertical-align: middle;
+  display: inline;
+  padding-right: .5rem;
+}
+:invalid ~ .propiedad:before {
+  content: "\26A0";
+  color: red;
+  vertical-align: middle;
+  display: inline;
+  padding-right: .5rem;
+}
+:invalid ~ .propiedad:after {
+  content: "Valor incorrecto";
+  color: red;
+  font-size: .8rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  text-align: left;
+}
+:required:invalid ~ .propiedad:after {
+  content:"Campo obligatorio";
+}
+input[type="email"]:invalid ~ .propiedad:after {
+  content:"El email debe llevar @ y .";
+}
+input[type="tel"]:invalid ~ .propiedad:after {
+  content:"El teléfono debe ser numérico, contener  9 dígitos y comenzar por 6, 7, 8 o 9";
+}
+input[type="url"]:invalid ~ .propiedad:after {
+  content:"La URL debe comenzar por http:// y contener al menos un nombre de dominio";
+}
+#hermanos:invalid ~ .propiedad:after {
+  content:"Debe estar entre 1 y 50";
+}
+@media (max-width: 720px) { 
+  .fila {
+    justify-content: flex-start;
+  }
+  .fila .propiedad {
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: .3rem;
+  }
+  :invalid ~ .propiedad:after {
+    left: 0;  
+  }
+}
