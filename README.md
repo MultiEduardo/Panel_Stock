@@ -33,7 +33,7 @@ lo contrario no servirá.
 
 1. Descomprimir el proyecto. (Hay que saber en qué ubicación lo estamos
 descomprimiendo para futuros pasos).
-2.Abrir la consola (Símbolo del sistema).
+2. Abrir la consola (Símbolo del sistema).
 3. Dirigirnos a la ruta en que está el ejecutable (en la carpeta "dist" del
 proyecto), por medio de comandos (cd <Tu ruta>/dist).
 4. Escribir el siguiente comando: java -jar "Panel.jar". Esto nos permitirá
@@ -50,13 +50,14 @@ El usuario inicial o provisional, con el que se puede probar el funcionamiento e
 
 Una vez iniciada sesión, para realizar las siguientes funciones: 
 
-1. Podras visualizar tú historial de los productos
-2. Puedes agregar un nuevo producto de tu tienda, tendras que llenar estos campos, nombre del producto, marca de producto, en donde esta creado dicho producto y darle un valor unitario
-3. Podras editar cualquier producto dado de alta
-4. podras eliminar cualquier producto dado de alta. 
+1. Podrás visualizar tu historial de los productos
+2. Puedes agregar un nuevo producto de tu tienda, tendrás que llenar estos campos, nombre del producto, marca de producto, en donde está creado dicho producto y darle un valor unitario
+3. Podrás editar cualquier producto dado de alta
+4. Podrás eliminar cualquier producto dado de alta. 
 &nbsp;
 
-Actualmente el programa se encuentra al 75% de su desarrollo por lo que todavia falta agregar nuevas funcionalides.
+Actualmente, el programa se encuentra al 75% de su desarrollo, por lo que todavía falta agregar nuevas funcionalidades.
+
 
  ## CRÉDITOS 
  
@@ -77,4 +78,5 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
+
 limitations under the License.
