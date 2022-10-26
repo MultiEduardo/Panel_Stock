@@ -1,4 +1,3 @@
-
 ## INSTALACIÓN Y CONFIGURACIÓN
  
 **¿Cómo ejecutar el programa?**
@@ -39,6 +38,9 @@ proyecto), por medio de comandos (cd <Tu ruta>/dist).
 4. Escribir el siguiente comando: java -jar "Panel.jar". Esto nos permitirá
 la correcta ejecución del programa, desde la consola.
 
+ ## EJECUCIÓN DEL PROGRAMA
+Una vez que descargaras el programa deberás irte al apartado de AppMain.java para que le des ejecutar, una vez ejecutado el programa deberás irte a cualquier navegador y poner esta ruta localhost:8080 y verás el programa ya ejecutado.
+
  ## USO DEL PROGRAMA
  
 Para usar el programa, hay que iniciar sesión con un usuario registrado en la base
@@ -57,7 +59,6 @@ Una vez iniciada sesión, para realizar las siguientes funciones:
 &nbsp;
 
 Actualmente, el programa se encuentra al 75% de su desarrollo, por lo que todavía falta agregar nuevas funcionalidades.
-
 
  ## CRÉDITOS 
  
@@ -78,5 +79,4 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-
 limitations under the License.
